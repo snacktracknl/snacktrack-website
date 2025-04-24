@@ -9,7 +9,7 @@ export default function Locaties() {
         <h1 className="text-4xl font-bold mb-6 text-blue-900">Locaties</h1>
 
         <p className="text-lg leading-relaxed mb-3">
-          SnackTrack richt zich op unieke, drukbezochte plekken waar gemak het verschil maakt – en waar een goede snack precies op het juiste moment nodig is.
+          SnackTrack richt zich op unieke, drukbezochte plekken waar gemak het verschil maakt en waar een goede snack precies op het juiste moment nodig is.
         </p>
 
         <p className="text-lg leading-relaxed mb-3">
@@ -21,7 +21,7 @@ export default function Locaties() {
         </p>
 
         <p className="text-lg leading-relaxed mb-3">
-          Wil je als locatiebeheerder, skigebied of horecapartner met ons in gesprek? Laat van je horen – wij denken graag mee over een oplossing op maat.
+          Wil je als locatiebeheerder, skigebied of horecapartner met ons in gesprek? Laat van je horen, wij denken graag mee over een oplossing op maat.
         </p>
 
         <p className="mt-8 text-lg leading-relaxed text-gray-700">
