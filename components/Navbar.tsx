@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <header className="w-full text-center py-6 bg-white shadow">
       <div className="flex justify-center">
-        <Image src="/images/logo.png" alt="SnackTrack logo" width={100} height={100} />
+        <Image src="/images/logo.png" alt="SnackTrack logo" width={200} height={200} />
       </div>
       <nav className="mt-4">
         <ul className="flex justify-center gap-6 text-sm font-medium text-gray-700">
