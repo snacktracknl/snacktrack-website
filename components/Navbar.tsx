@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <>
       {/* Compacte witte balk met logo */}
-      <div className="bg-white shadow py-1 z-50 relative">
+      <div className="bg-white shadow py-0.25 z-50 relative">
         <div className="flex justify-center">
           <Image src="/images/logo.png" alt="SnackTrack logo" width={200} height={200} />
         </div>
