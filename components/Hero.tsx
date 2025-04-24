@@ -1,9 +1,14 @@
+import Image from 'next/image'
+
 export default function Hero() {
   return (
-    <div className="relative h-[75vh] bg-cover bg-center text-white" style={{ backgroundImage: "url('/images/hero.jpg')" }}>
-      <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center flex-col text-center px-4">
-        <h1 className="text-5xl md:text-6xl font-extrabold drop-shadow-lg">Snack slimmer. Ride harder.</h1>
-        <p className="mt-4 text-xl md:text-2xl">Altijd jouw favoriete snack bij de skilift</p>
+    <div className="relative h-screen bg-cover bg-center text-white" style={{ backgroundImage: "url('/images/hero.jpg')" }}>
+      <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center text-center px-4">
+        <Image src="/images/logo.png" alt="SnackTrack logo" width={90} height={90} className="mb-4" />
+        <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6">SNACK SMARTER.<br />RIDE HARDER.</h1>
+        <a href="#main" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded shadow">
+          LEES MEER
+        </a>
       </div>
     </div>
   )
