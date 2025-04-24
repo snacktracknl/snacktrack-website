@@ -6,7 +6,7 @@ export default function Navbar() {
     <>
       {/* Witte balk met logo */}
       <div className="bg-white shadow py-1.5 z-50 relative flex justify-between items-center" style={{ height: '130px' }}>
-        <div className="flex justify-center">
+        <div className="flex justify-center w-full absolute left-0 right-0">
           <Image src="/images/logo.png" alt="SnackTrack logo" width={180} height={180} />
         </div>
 
