@@ -18,13 +18,13 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <img src="/images/vending.jpg" alt="Vending bij skihut" className="rounded shadow" />
+            <img src="/images/vending.png" alt="Vending bij skihut" className="rounded shadow" />
           </div>
         </section>
 
         <section className="grid md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1">
-            <img src="/images/skiers.jpg" alt="Skiërs met snack" className="rounded shadow" />
+            <img src="/images/skiers.png" alt="Skiërs met snack" className="rounded shadow" />
           </div>
           <div className="order-1 md:order-2">
             <h2 className="text-3xl font-bold mb-4">Voor Skiërs</h2>
