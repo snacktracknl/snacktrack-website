@@ -1,4 +1,3 @@
-
 export default function Hero() {
   return (
     <div className="relative h-[60vh] bg-cover bg-center text-white" style={{ backgroundImage: "url('/images/hero.jpg')" }}>
