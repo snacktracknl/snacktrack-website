@@ -1,7 +1,40 @@
+import { useState } from 'react';
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+  const [status, setStatus] = useState('');
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Verstuur formulier naar Formspree
+    fetch('https://formspree.io/f/movdqzoz', { // vervang 'mwknejzv' met je eigen Form ID
+      method: 'POST',
+      body: new FormData(e.target),
+    })
+      .then((response) => {
+        if (response.ok) {
+          setStatus('Bericht succesvol verstuurd!');
+        } else {
+          setStatus('Er is een fout opgetreden, probeer het opnieuw.');
+        }
+      })
+      .catch(() => setStatus('Er is een fout opgetreden, probeer het opnieuw.'));
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -34,33 +67,59 @@ export default function Contact() {
 
         <h2 className="text-3xl font-bold mb-4 text-blue-900">Of gebruik het contactformulier hieronder. We reageren binnen 24 uur.</h2>
 
-        <form action="https://formspree.io/f/yourformid" method="POST" className="space-y-4">
+        {/* Contactformulier */}
+        <form onSubmit={handleSubmit} method="POST" action="https://formspree.io/f/mwknejzv" className="space-y-4">  {/* Voeg je Form ID hier in */}
           <div>
             <label htmlFor="name" className="block text-lg font-medium">Naam</label>
-            <input type="text" id="name" name="name" className="w-full p-3 border border-gray-300 rounded" required />
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              value={formData.name} 
+              onChange={handleChange} 
+              className="w-full p-3 border border-gray-300 rounded" 
+              required 
+            />
           </div>
 
           <div>
             <label htmlFor="email" className="block text-lg font-medium">E-mail</label>
-            <input type="email" id="email" name="email" className="w-full p-3 border border-gray-300 rounded" required />
-          </div>
-
-          <div>
-            <label htmlFor="subject" className="block text-lg font-medium">Onderwerp</label>
-            <input type="text" id="subject" name="subject" className="w-full p-3 border border-gray-300 rounded" required />
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              value={formData.email} 
+              onChange={handleChange} 
+              className="w-full p-3 border border-gray-300 rounded" 
+              required 
+            />
           </div>
 
           <div>
             <label htmlFor="message" className="block text-lg font-medium">Bericht</label>
-            <textarea id="message" name="message" className="w-full p-3 border border-gray-300 rounded" rows="6" required></textarea>
+            <textarea 
+              id="message" 
+              name="message" 
+              value={formData.message} 
+              onChange={handleChange} 
+              className="w-full p-3 border border-gray-300 rounded" 
+              rows="6" 
+              required 
+            />
           </div>
 
-          <button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded">
+          <button 
+            type="submit" 
+            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded"
+          >
             Verstuur
           </button>
         </form>
+
+        {/* Statusbericht */}
+        {status && <p className="mt-4 text-lg">{status}</p>}
       </main>
       <Footer />
     </div>
-  )
+  );
 }
