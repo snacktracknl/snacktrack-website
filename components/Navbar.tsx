@@ -4,11 +4,9 @@ import Link from 'next/link'
 export default function Navbar() {
   return (
     <>
-      {/* Witte balk met logo */}
-      <div className="bg-white shadow py-1 z-50 relative">
-        <div className="flex justify-center">
-          <Image src="/images/logo.png" alt="SnackTrack logo" width={180} height={180} />
-        </div>
+      {/* Witte balk met logo, maar zelf kleinere hoogte */}
+      <div className="bg-white shadow py-1.5 z-50 relative flex justify-center items-center" style={{ height: '130px' }}>
+        <Image src="/images/logo.png" alt="SnackTrack logo" width={200} height={200} />
       </div>
 
       {/* Navigatie onder logo-balk, verder naar beneden op hero */}
