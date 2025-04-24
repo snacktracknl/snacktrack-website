@@ -25,7 +25,7 @@ export default function Locaties() {
         </p>
 
         <p className="mt-8 text-lg leading-relaxed text-gray-700">
-          Neem contact op via info@snacktrack.nl of het formulier op de contactpagina.
+          Neem contact op via <a href="mailto:info@snacktrack.nl" className="text-blue-600 hover:text-orange-500">info@snacktrack.nl</a> of het formulier op de contactpagina.
         </p>
       </main>
       <Footer />
