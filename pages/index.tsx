@@ -1,32 +1,52 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Hero from '../components/Hero'
+import Script from 'next/script'
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <Hero />
-      <main className="p-6 max-w-4xl mx-auto space-y-16">
+      <main id="main" className="p-6 max-w-5xl mx-auto space-y-20">
         <section>
-          <h2 className="text-3xl font-bold mb-4">Waarom SnackTrack?</h2>
-          <p className="text-lg">Onze automaten zijn gebouwd voor sneeuw en kou. Geen wachtrijen meer, geen gedoe met pinpassen of muntjes: gewoon snacken, direct op de piste.</p>
+          <h2 className="text-3xl font-bold mb-4">Voor Locaties</h2>
+          <p className="text-lg text-gray-700">
+            Onze automaten zijn een slimme toevoeging voor skihutten, liftstations en resorts. Ze genereren extra omzet zonder extra personeel en bieden 24/7 gemak aan bezoekers.
+          </p>
         </section>
 
         <section>
-          <h2 className="text-3xl font-bold mb-4">Voor skiërs & snowboarders</h2>
-          <p className="text-lg">Je bent onderweg, het is koud en je hebt trek. Onze slimme automaten staan direct bij de skilift en bieden warme én koude snacks, zonder je gear uit te hoeven doen.</p>
+          <h2 className="text-3xl font-bold mb-4">Voor Skiërs</h2>
+          <p className="text-lg text-gray-700">
+            Of je nu onderweg bent naar de volgende afdaling of net van de piste komt – met SnackTrack automaten pak je snel een warme of koude snack, zonder je gear uit te trekken.
+          </p>
         </section>
 
         <section>
-          <h2 className="text-3xl font-bold mb-4">Voor locaties & exploitanten</h2>
-          <p className="text-lg">Bied extra service zonder extra personeel. Onze vendingmachines zijn snel, betrouwbaar en volledig cashless – perfect voor skihutten, liften en resorts.</p>
+          <h2 className="text-3xl font-bold mb-4">Waar vind je ons?</h2>
+          <div className="w-full h-96">
+            <iframe
+              src="https://www.google.com/maps/d/embed?mid=1lLkU6Eq-U_YFx6tiOAgKgDdcXxEvjB4&hl=en&ehbc=2E312F"
+              width="100%"
+              height="100%"
+              allowFullScreen
+              loading="lazy"
+              className="rounded-md shadow"
+            ></iframe>
+          </div>
         </section>
 
         <section>
-          <h2 className="text-3xl font-bold mb-4">Wat anderen zeggen</h2>
-          <blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-700">"Onze klanten zijn dol op de snelheid en het gemak van SnackTrack. En wij ook!" – Skihut Tirol</blockquote>
-          <blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-700 mt-4">"Eindelijk warme snacks zónder van de piste af te hoeven!" – Wintersporter.nl</blockquote>
+          <h2 className="text-3xl font-bold mb-6">Neem contact op</h2>
+          <form action="https://formspree.io/f/yourformid" method="POST" className="space-y-4">
+            <input type="text" name="name" placeholder="Naam" required className="w-full border border-gray-300 rounded p-3" />
+            <input type="email" name="email" placeholder="E-mailadres" required className="w-full border border-gray-300 rounded p-3" />
+            <textarea name="message" placeholder="Bericht" required rows="5" className="w-full border border-gray-300 rounded p-3"></textarea>
+            <button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded">
+              Verstuur
+            </button>
+          </form>
         </section>
       </main>
       <Footer />
