@@ -3,37 +3,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
   const [status, setStatus] = useState('');
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Verstuur formulier naar Formspree
-    fetch('https://formspree.io/f/movdqzoz', { // vervang 'mwknejzv' met je eigen Form ID
-      method: 'POST',
-      body: new FormData(e.target),
-    })
-      .then((response) => {
-        if (response.ok) {
-          setStatus('Bericht succesvol verstuurd!');
-        } else {
-          setStatus('Er is een fout opgetreden, probeer het opnieuw.');
-        }
-      })
-      .catch(() => setStatus('Er is een fout opgetreden, probeer het opnieuw.'));
-  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -68,15 +38,17 @@ export default function Contact() {
         <h2 className="text-3xl font-bold mb-4 text-blue-900">Of gebruik het contactformulier hieronder. We reageren binnen 24 uur.</h2>
 
         {/* Contactformulier */}
-        <form onSubmit={handleSubmit} method="POST" action="https://formspree.io/f/mwknejzv" className="space-y-4">  {/* Voeg je Form ID hier in */}
+        <form 
+          action="https://formspree.io/f/movdqzoz"  {/* Vervang 'mwknejzv' met je eigen Form ID */}
+          method="POST" 
+          className="space-y-4"
+        >
           <div>
             <label htmlFor="name" className="block text-lg font-medium">Naam</label>
             <input 
               type="text" 
               id="name" 
               name="name" 
-              value={formData.name} 
-              onChange={handleChange} 
               className="w-full p-3 border border-gray-300 rounded" 
               required 
             />
@@ -88,8 +60,6 @@ export default function Contact() {
               type="email" 
               id="email" 
               name="email" 
-              value={formData.email} 
-              onChange={handleChange} 
               className="w-full p-3 border border-gray-300 rounded" 
               required 
             />
@@ -100,8 +70,6 @@ export default function Contact() {
             <textarea 
               id="message" 
               name="message" 
-              value={formData.message} 
-              onChange={handleChange} 
               className="w-full p-3 border border-gray-300 rounded" 
               rows="6" 
               required 
