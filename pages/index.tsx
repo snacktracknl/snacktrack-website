@@ -4,10 +4,10 @@ import Hero from '../components/Hero'
 
 export default function Home() {
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Navbar />
       <Hero />
-      <main id="main" className="p-6 max-w-6xl mx-auto space-y-24 text-gray-800">
+      <main id="main" className="flex-grow p-6 max-w-6xl mx-auto space-y-24 text-gray-800">
         <section className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h2 className="text-4xl font-bold mb-2 text-blue-900">Voor Locaties</h2>
@@ -41,6 +41,6 @@ export default function Home() {
         </section>
       </main>
       <Footer />
-    </>
+    </div>
   )
 }
