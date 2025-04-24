@@ -42,7 +42,7 @@ export default function Home() {
           <form action="https://formspree.io/f/yourformid" method="POST" className="space-y-4">
             <input type="text" name="name" placeholder="Naam" required className="w-full border border-gray-300 rounded p-3" />
             <input type="email" name="email" placeholder="E-mailadres" required className="w-full border border-gray-300 rounded p-3" />
-            <textarea name="message" placeholder="Bericht" required rows="5" className="w-full border border-gray-300 rounded p-3"></textarea>
+            <textarea name="message" placeholder="Bericht" required rows={5} className="w-full border border-gray-300 rounded p-3"></textarea>
             <button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded">
               Verstuur
             </button>
