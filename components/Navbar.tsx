@@ -3,19 +3,19 @@ import Link from 'next/link'
 
 export default function Navbar() {
   return (
-    <header className="w-full text-center py-6 bg-white shadow">
-      <div className="flex justify-center">
+    <header className="absolute top-0 left-0 w-full z-50 text-white">
+      <div className="flex flex-col items-center pt-4">
         <Image src="/images/logo.png" alt="SnackTrack logo" width={200} height={200} />
+        <nav className="mt-4">
+          <ul className="flex gap-6 text-lg font-extrabold tracking-wide">
+            <li><Link href="/" className="hover:underline">Home</Link></li>
+            <li><Link href="/over-ons" className="hover:underline">Over ons</Link></li>
+            <li><Link href="/automaten" className="hover:underline">Automaten</Link></li>
+            <li><Link href="/locaties" className="hover:underline">Locaties</Link></li>
+            <li><Link href="/contact" className="hover:underline">Contact</Link></li>
+          </ul>
+        </nav>
       </div>
-      <nav className="mt-4">
-        <ul className="flex justify-center gap-6 text-sm font-medium text-gray-700">
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/over-ons">Over ons</Link></li>
-          <li><Link href="/automaten">Automaten</Link></li>
-          <li><Link href="/locaties">Locaties</Link></li>
-          <li><Link href="/contact">Contact</Link></li>
-        </ul>
-      </nav>
     </header>
   )
 }
