@@ -1,8 +1,6 @@
-
-import Hero from '../components/Hero'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import Image from 'next/image'
+import Hero from '../components/Hero'
 
 export default function Home() {
   return (
@@ -26,10 +24,6 @@ export default function Home() {
           <h2 className="text-2xl font-bold mb-4">Wat anderen zeggen</h2>
           <blockquote className="italic">"SnackTrack was een gamechanger voor onze skihut – klanten zijn enthousiast!"</blockquote>
           <blockquote className="italic mt-2">"Geen koude energierepen meer in mijn rugzak – ik pak gewoon wat uit de automaat!"</blockquote>
-        </section>
-        <section>
-          <h2 className="text-2xl font-bold mb-4">Onze automaten</h2>
-          <Image src="/images/vending.jpg" alt="Vending machine" width={600} height={400} />
         </section>
       </main>
       <Footer />
