@@ -12,7 +12,7 @@ export default function Navbar() {
       </div>
 
       {/* Navigatie onder de logo-balk, maar over hero */}
-      <nav className="absolute z-40 left-0 w-full mt-[-1.5rem]">
+      <nav className="absolute z-50 left-0 w-full mt-[-1.5rem]">
         <ul className="flex justify-center gap-8 text-lg font-bold text-white drop-shadow-lg bg-black bg-opacity-10 py-2 px-4 rounded-md max-w-fit mx-auto">
           <li><Link href="/" className="hover:underline">Home</Link></li>
           <li><Link href="/over-ons" className="hover:underline">Over ons</Link></li>
