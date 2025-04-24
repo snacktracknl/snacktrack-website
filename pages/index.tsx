@@ -7,23 +7,26 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
-      <main className="p-6 space-y-12">
+      <main className="p-6 max-w-4xl mx-auto space-y-16">
         <section>
-          <h2 className="text-2xl font-bold mb-2">Waarom SnackTrack?</h2>
-          <p>Onze automaten zijn gemaakt voor de sneeuw: robuust, verwarmd en 24/7 beschikbaar. Geen wachtrijen meer voor een snack op de piste!</p>
+          <h2 className="text-3xl font-bold mb-4">Waarom SnackTrack?</h2>
+          <p className="text-lg">Onze automaten zijn gebouwd voor sneeuw en kou. Geen wachtrijen meer, geen gedoe met pinpassen of muntjes: gewoon snacken, direct op de piste.</p>
         </section>
+
         <section>
-          <h2 className="text-2xl font-bold mb-2">Voor locaties</h2>
-          <p>Beheerders van skiliften of skihutten kunnen eenvoudig extra service bieden en omzet genereren zonder personeel.</p>
+          <h2 className="text-3xl font-bold mb-4">Voor skiërs & snowboarders</h2>
+          <p className="text-lg">Je bent onderweg, het is koud en je hebt trek. Onze slimme automaten staan direct bij de skilift en bieden warme én koude snacks, zonder je gear uit te hoeven doen.</p>
         </section>
+
         <section>
-          <h2 className="text-2xl font-bold mb-2">Voor skiërs & snowboarders</h2>
-          <p>Even een snelle snack of drankje zonder van je gear af te gaan? Wij staan er, direct naast de lift!</p>
+          <h2 className="text-3xl font-bold mb-4">Voor locaties & exploitanten</h2>
+          <p className="text-lg">Bied extra service zonder extra personeel. Onze vendingmachines zijn snel, betrouwbaar en volledig cashless – perfect voor skihutten, liften en resorts.</p>
         </section>
+
         <section>
-          <h2 className="text-2xl font-bold mb-4">Wat anderen zeggen</h2>
-          <blockquote className="italic">"SnackTrack was een gamechanger voor onze skihut – klanten zijn enthousiast!"</blockquote>
-          <blockquote className="italic mt-2">"Geen koude energierepen meer in mijn rugzak – ik pak gewoon wat uit de automaat!"</blockquote>
+          <h2 className="text-3xl font-bold mb-4">Wat anderen zeggen</h2>
+          <blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-700">"Onze klanten zijn dol op de snelheid en het gemak van SnackTrack. En wij ook!" – Skihut Tirol</blockquote>
+          <blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-700 mt-4">"Eindelijk warme snacks zónder van de piste af te hoeven!" – Wintersporter.nl</blockquote>
         </section>
       </main>
       <Footer />
