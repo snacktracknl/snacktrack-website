@@ -20,18 +20,18 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <img src="/images/vending.jpg" alt="Vending bij skihut" className="rounded shadow" />
+            <img src="/images/vending.png" alt="Vending bij skihut" className="rounded shadow" />
           </div>
         </section>
 
         <section className="grid md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1">
-            <img src="/images/skiers.jpg" alt="Skiërs met snack" className="rounded shadow" />
+            <img src="/images/skiers.png" alt="Skiërs met snack" className="rounded shadow" />
           </div>
           <div className="order-1 md:order-2 space-y-6">
             <h2 className="text-4xl font-bold mb-2 text-blue-900">Voor Skiërs</h2>
             <p className="text-lg leading-relaxed">
-              Je staat bij de gondel. Het is koud. Je hebt trek. Onze automaten staan er — precies waar je ze nodig hebt.
+              Je staat bij de gondel. Het is koud. Je hebt trek. Onze automaten staan er precies waar je ze nodig hebt.
             </p>
             <p className="text-lg leading-relaxed">
               Geen gedoe met je handschoenen, geen wachtrijen of pinpassen. Gewoon scannen, kiezen, snacken, en weer door!
