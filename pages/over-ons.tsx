@@ -9,7 +9,7 @@ export default function OverOns() {
         <h1 className="text-4xl font-bold mb-4 text-blue-900">Over ons</h1>
 
         <p className="text-lg leading-relaxed mb-3">
-          Wij zijn Marenne en Jim – partners in het leven én in de vending business. Vanuit Rotterdam bouwen we samen aan SnackTrack: slimme vendingoplossingen voor mensen die onderweg zijn, honger hebben en geen zin hebben in gedoe.
+          Partners in het leven én in de vending business. Vanuit Rotterdam bouwen we samen aan SnackTrack: slimme vendingoplossingen voor mensen die onderweg zijn, honger hebben en geen zin hebben in gedoe.
         </p>
 
         <p className="text-lg leading-relaxed mb-3">
